@@ -8,6 +8,17 @@ namespace Entidades
 {
     public  class Pantalla:Elemento
     {
+        private int numerodeSerie;
+
+        public Pantalla(string marca, string modelo, int numerodeSerie, int anioFabricacion, int pulgadas)
+        {
+            this.marca = marca;
+            this.modelo = modelo;
+            this.numerodeSerie = numerodeSerie;
+            AnioFabricacion = anioFabricacion;
+            Pulgadas = pulgadas;
+        }
+
         public int AnioFabricacion { get; set; }
         public Nullable<int> Pulgadas { get; set; }
         public bool EsNueva ()

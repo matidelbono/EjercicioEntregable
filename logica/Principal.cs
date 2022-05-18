@@ -26,30 +26,15 @@ namespace logica
                 return Instance;
             }
         }
-        public EventHandler<ModificacionEventArgs> ModificacionRealizada;
-        public void AgregarElemento(string DescripcionProcesador, int CantidadMemoriaRam, string NombreFabricante)
+       
+        public void AgregarElemento(string marca, string modelo, int NumerodeSerie,string DescripcionProcesador, int CantidadMemoriaRam, string NombreFabricante, int Id)
         {
-            Computadora nuevacomputadora=new Computadora();
-            nuevacomputadora.DescripcionProcesador = DescripcionProcesador;
-            nuevacomputadora.CantidadMemoriaRam = CantidadMemoriaRam;
-            nuevacomputadora.NombreFabricante=NombreFabricante;
-            computadoras.Add(nuevacomputadora);
-            if (this.ModificacionRealizada != null)
-                this.ModificacionRealizada(this, new ModificacionEventArgs());
-            
+            computadoras.Add(new Computadora(marca, modelo, NumerodeSerie, Id,DescripcionProcesador,CantidadMemoriaRam,NombreFabricante))
+          
         }
-        public void AgregarElemento(int anioFabricacion, int Pulgadas)
+        public void AgregarElemento(string marca, string modelo, int NumerodeSerie,int anioFabricacion, int Pulgadas)
         {
-          Pantalla nuevaPantalla=new Pantalla();
-            nuevaPantalla.AnioFabricacion=anioFabricacion;
-            nuevaPantalla.Pulgadas=Pulgadas;
-            pantallas.Add(nuevaPantalla);
-            if (this.ModificacionRealizada != null)
-                this.ModificacionRealizada(this, new ModificacionEventArgs());
-
-
-
-
+            pantallas.Add(new Pantalla(marca, modelo, NumerodeSerie, anioFabricacion, Pulgadas));
         }
     }
 }
