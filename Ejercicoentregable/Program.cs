@@ -12,6 +12,7 @@ namespace Ejercicoentregable
     {
         static void Main(string[] args)
     {
+            Principal.instance.ElementoAgregadoOEliminado += ElementoAgregadoOEliminadoHandler;
             Console.WriteLine("ingrese el Nro de serie");
             int NroSerie = int.Parse(Console.ReadLine());
             while (NroSerie!=0)
