@@ -28,5 +28,11 @@ namespace Entidades
             else
                 return false;
         }
+        public override string DescripcionPorTipo()
+        {
+            if (Pulgadas.HasValue==true)
+            return $"MONITOR{ marca} - { modelo} - { Pulgadas}";
+            return $"MONITOR{ marca} - { modelo}";
+        }
 }
 }

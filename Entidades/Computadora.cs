@@ -10,7 +10,7 @@ namespace Entidades
     {
         private int numerodeSerie;
 
-        public Computadora(string marca, string modelo, int numerodeSerie, int id, string descripcionProcesador, int cantidadMemoriaRam, string nombreFabricante)
+        public Computadora(string marca, string modelo, int numerodeSerie, int id, string descripcionProcesador, int cantidadMemoriaRam, string nombreFabricante, int cantidad)
         {
             this.marca = marca;
             this.modelo = modelo;
@@ -19,11 +19,16 @@ namespace Entidades
             DescripcionProcesador = descripcionProcesador;
             CantidadMemoriaRam = cantidadMemoriaRam;
             NombreFabricante = nombreFabricante;
+            
         }
 
         public string DescripcionProcesador { get; set; }
         public int CantidadMemoriaRam { get; set; }
         public string NombreFabricante { get; set; }
-
+        public int CantidadComputadoras { get; set; }
+        public override string DescripcionPorTipo()
+        {
+            return $"PC {modelo} - {marca} - {DescripcionProcesador} - {CantidadMemoriaRam} Ram - {NombreFabricante}";
+        }
     }
 }

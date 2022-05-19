@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Computadora.cs" />
     <Compile Include="Elemento.cs" />
+    <Compile Include="Enumerador.cs" />
     <Compile Include="Pantalla.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Estatica.cs" />
     <Compile Include="Principal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -48,6 +49,10 @@
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{5b5e7cd2-495e-4d1e-88ce-54e3ef5c4bcb}</Project>
       <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Eventos\Eventos.csproj">
+      <Project>{353c19ef-cb49-4ff0-b17f-89d098200abe}</Project>
+      <Name>Eventos</Name>
     </ProjectReference>
     <ProjectReference Include="..\persistencia\persistencia.csproj">
       <Project>{33b1e06f-c02c-47eb-91fc-74ee5fe5fa84}</Project>
